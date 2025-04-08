@@ -4,99 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeevan Jhola - Sustainability Startup</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts for Ethnic Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styles */
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        h1, h2, h3 {
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #4CAF50; border-radius: 4px; }
+        .btn { transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .department-card { transition: all 0.3s ease; }
+        .department-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        
+        /* Enhanced Tagline Styles */
+        .tagline {
             font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            display: inline-block;
+            animation: fadeInUp 1.5s ease;
         }
-        /* Color Palette */
-        :root {
-            --primary-green: #2E7D32;
-            --secondary-saffron: #F4A261;
-            --accent-blue: #1E3A8A;
-            --neutral-cream: #F5F5F5;
-            --neutral-charcoal: #1F2937;
+        .tagline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
         }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-green);
-            border-radius: 4px;
-        }
-        /* Button Styles */
-        .btn {
-            transition: all 0.3s ease;
-            background: var(--primary-green);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            background: #1B5E20;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        /* Card Hover Effect */
-        .card {
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        }
-        /* Subtle Ethnic Background Pattern */
-        .pattern-bg {
-            background: linear-gradient(rgba(245,245,245,0.9), rgba(245,245,245,0.9)), url('https://www.transparenttextures.com/patterns/asanoha-400px.png');
-        }
-        /* Active Nav Link */
-        .nav-link.active {
-            color: var(--secondary-saffron);
-            border-bottom: 2px solid var(--secondary-saffron);
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-<body class="text-gray-800 bg-neutral-cream">
-    <!-- Navigation Bar -->
-    <nav class="sticky top-0 bg-white shadow-md z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-bold text-primary-green">Jeevan Jhola</a>
-            <div class="space-x-6">
-                <a href="#hero" class="nav-link text-gray-600 hover:text-secondary-saffron transition">Home</a>
-                <a href="#about" class="nav-link text-gray-600 hover:text-secondary-saffron transition">About</a>
-                <a href="#how-it-works" class="nav-link text-gray-600 hover:text-secondary-saffron transition">How It Works</a>
-                <a href="#departments" class="nav-link text-gray-600 hover:text-secondary-saffron transition">Departments</a>
-                <a href="#get-involved" class="nav-link text-gray-600 hover:text-secondary-saffron transition">Get Involved</a>
-                <a href="#contact" class="nav-link text-gray-600 hover:text-secondary-saffron transition">Contact</a>
-            </div>
-        </div>
-    </nav>
-
+<body class="font-sans text-gray-800 bg-cream-100">
     <!-- Hero Section -->
     <section id="hero" class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Jeevan Jhola</h1>
-            <p class="text-xl md:text-2xl mb-6 animate-slide-up">"What You Carry, Carries You"</p>
-            <div class="space-x-4">
-                <a href="#get-involved" class="btn">Join Us</a>
-                <a href="#how-it-works" class="btn bg-secondary-saffron hover:bg-orange-600">Explore System</a>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Jeevan Jhola</h1>
+            <div class="tagline mb-8">
+                <p class="text-3xl md:text-4xl italic font-light">"What You Carry, Carries You"</p>
             </div>
-            <a href="#about" class="absolute bottom-10 animate-bounce" aria-label="Scroll to About">
+            <div class="space-x-4">
+                <a href="#get-involved" class="btn inline-block px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg">Join Us</a>
+                <a href="#how-it-works" class="btn inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg">Explore System</a>
+            </div>
+            <a href="#about" class="absolute bottom-10 animate-bounce">
                 <i class="fas fa-chevron-down text-2xl"></i>
             </a>
         </div>
@@ -106,11 +65,11 @@
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4 md:flex items-center">
             <div class="md:w-1/2 mb-8 md:mb-0">
-                <h2 class="text-3xl font-bold mb-4 text-primary-green">About Us</h2>
+                <h2 class="text-3xl font-bold mb-4">About Us</h2>
                 <p class="text-lg mb-4">Jeevan Jhola is a sustainability-driven startup that aims to eliminate single-use plastic from daily life through community-powered circular systems.</p>
                 <p class="text-lg mb-4"><strong>Mission:</strong> Plastic-free, sustainable, youth-powered future.</p>
                 <p class="text-lg mb-4"><strong>Vision:</strong> A world where utility and responsibility go hand in hand.</p>
-                <blockquote class="border-l-4 border-secondary-saffron pl-4 italic text-gray-600">"We’re not just reducing plastic—we’re building a movement." - Founder</blockquote>
+                <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-600">"We’re not just reducing plastic—we’re building a movement." - Founder</blockquote>
             </div>
             <div class="md:w-1/2">
                 <img src="https://images.unsplash.com/photo-1522075782449-2f639aa9c2e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Volunteers working on sustainability initiatives" class="rounded-lg shadow-lg w-full">
@@ -119,110 +78,100 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-16 pattern-bg">
+    <section id="how-it-works" class="py-16 bg-cream-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary-green">How It Works</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="card text-center bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-green text-white flex items-center justify-center text-2xl">1</div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">1</div>
                     <h3 class="text-xl font-semibold mb-2">Take Bag</h3>
                     <p>Pick up a reusable bag from our partner shops.</p>
                 </div>
-                <div class="card text-center bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-green text-white flex items-center justify-center text-2xl">2</div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">2</div>
                     <h3 class="text-xl font-semibold mb-2">Use</h3>
                     <p>Use it for shopping, deliveries, or daily needs.</p>
                 </div>
-                <div class="card text-center bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-green text-white flex items-center justify-center text-2xl">3</div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">3</div>
                     <h3 class="text-xl font-semibold mb-2">Return</h3>
                     <p>Drop it off at any collection point.</p>
                 </div>
-                <div class="card text-center bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-green text-white flex items-center justify-center text-2xl">4</div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">4</div>
                     <h3 class="text-xl font-semibold mb-2">Earn Points</h3>
                     <p>Get rewards for every return.</p>
                 </div>
             </div>
-            <p class="text-center mt-8 text-lg text-gray-600">Future Scope: Reusable containers, delivery systems, and awareness campaigns.</p>
+            <p class="text-center mt-8 text-lg">Future Scope: Reusable containers, delivery systems, and awareness campaigns.</p>
         </div>
     </section>
 
     <!-- Departments Section -->
     <section id="departments" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary-green">Our Departments</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Our Departments</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="card bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-accent-blue">Reusable Bag Network</h3>
+                <a href="reusable-bag-network.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Reusable Bag Network</h3>
                     <p>Building a circular system for reusable bags.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-accent-blue">Waste Collection</h3>
+                </a>
+                <a href="waste-collection.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Waste Collection</h3>
                     <p>Organizing efficient waste recovery.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-accent-blue">Student Engagement</h3>
+                </a>
+                <a href="student-engagement.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Student Engagement</h3>
                     <p>Empowering youth for sustainability.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-accent-blue">Research & Innovation</h3>
+                </a>
+                <a href="research-innovation.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Research & Innovation</h3>
                     <p>Designing scalable eco-solutions.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-accent-blue">Social Awareness Campaigns</h3>
+                </a>
+                <a href="social-awareness-campaigns.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Social Awareness Campaigns</h3>
                     <p>Sparking a movement against plastic.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Get Involved Section -->
-    <section id="get-involved" class="py-16 pattern-bg">
+    <section id="get-involved" class="py-16 bg-cream-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-primary-green">Get Involved</h2>
-            <p class="text-lg text-center mb-12 text-gray-600">Be a part of the change. Join us as an intern, volunteer, or partner.</p>
-            <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-semibold mb-6 text-center text-accent-blue">Join Jeevan Jhola</h3>
-                <form target="_blank" action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST" class="space-y-6">
-                    <!-- Hidden Fields for FormSubmit -->
+            <h2 class="text-3xl font-bold text-center mb-8">Get Involved</h2>
+            <p class="text-lg text-center mb-12">Be a part of the change. Join us as an intern, volunteer, or partner.</p>
+            <div class="container">
+                <h1 class="text-2xl font-semibold mb-6 text-center">Join Jeevan Jhola</h1>
+                <form target="_blank" action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="New Submission from Jeevan Jhola Website">
                     <input type="hidden" name="_next" value="https://<your-username>.github.io/jeevan-jhola/thank-you.html">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Jeevan Jhola! We’ll get back to you soon.">
-
-                    <!-- Role Selection -->
-                    <div class="mb-4">
-                        <label class="block text-gray-600 mb-2 font-semibold">Select Role</label>
-                        <div class="flex space-x-4 justify-center">
-                            <label class="flex items-center">
-                                <input type="radio" name="role" value="Intern" class="mr-2 text-primary-green focus:ring-primary-green" required>
-                                Intern
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" name="role" value="Volunteer" class="mr-2 text-primary-green focus:ring-primary-green">
-                                Volunteer
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" name="role" value="Partner" class="mr-2 text-primary-green focus:ring-primary-green">
-                                Partner
-                            </label>
+                    <div class="form-group mb-4">
+                        <div class="form-row flex flex-col md:flex-row md:space-x-4">
+                            <div class="col flex-1">
+                                <input type="text" name="name" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Full Name" required>
+                            </div>
+                            <div class="col flex-1">
+                                <input type="email" name="email" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Email Address" required>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Form Fields -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" name="name" class="w-full p-3 border rounded-lg focus:outline-none focus:border-primary-green" placeholder="Full Name" required>
-                        <input type="email" name="email" class="w-full p-3 border rounded-lg focus:outline-none focus:border-primary-green" placeholder="Email Address" required>
+                    <div class="form-group mb-4">
+                        <div class="form-row flex flex-col md:flex-row md:space-x-4">
+                            <div class="col flex-1">
+                                <input type="tel" name="phone" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Phone Number" required>
+                            </div>
+                            <div class="col flex-1">
+                                <input type="text" name="location" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Location" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="tel" name="phone" class="w-full p-3 border rounded-lg focus:outline-none focus:border-primary-green" placeholder="Phone Number" required>
-                        <input type="text" name="location" class="w-full p-3 border rounded-lg focus:outline-none focus:border-primary-green" placeholder="Location" required>
+                    <div class="form-group mb-4">
+                        <textarea placeholder="Why do you want to join?" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" name="why" rows="5" required></textarea>
                     </div>
-                    <textarea name="why" placeholder="Why do you want to join?" class="w-full p-3 border rounded-lg focus:outline-none focus:border-primary-green h-32" required></textarea>
-                    
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn w-full">Submit Form</button>
+                    <button type="submit" class="btn btn-lg btn-dark btn-block w-full p-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition">Submit Form</button>
                 </form>
             </div>
         </div>
@@ -231,102 +180,42 @@
     <!-- Contact Us Section -->
     <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8 text-primary-green">Contact Us</h2>
-            <p class="text-lg mb-4">Email: <a href="mailto:hello.jeevanjhola@gmail.com" class="text-secondary-saffron hover:underline">hello.jeevanjhola@gmail.com</a></p>
+            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+            <p class="text-lg mb-4">Email: <a href="mailto:hello.jeevanjhola@gmail.com" class="text-green-600 hover:underline">hello.jeevanjhola@gmail.com</a></p>
             <div class="flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/company/jeevan-jhola/?viewAsMember=true" target="_blank" class="text-gray-600 hover:text-secondary-saffron transition"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://wa.me/919709799899" target="_blank" class="text-gray-600 hover:text-secondary-saffron transition"><i class="fab fa-whatsapp fa-2x"></i></a>
+                <a href="https://www.linkedin.com/company/jeevan-jhola/?viewAsMember=true" target="_blank" class="text-gray-600 hover:text-green-600 transition"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://wa.me/919709799899" target="_blank" class="text-gray-600 hover:text-green-600 transition"><i class="fab fa-whatsapp fa-2x"></i></a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-neutral-charcoal text-white text-center">
+    <footer class="py-8 bg-gray-100 text-center">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-4">
-                <a href="#about" class="hover:text-secondary-saffron transition">About</a>
-                <a href="#how-it-works" class="hover:text-secondary-saffron transition">How It Works</a>
-                <a href="#departments" class="hover:text-secondary-saffron transition">Departments</a>
-                <a href="#get-involved" class="hover:text-secondary-saffron transition">Get Involved</a>
-                <a href="#contact" class="hover:text-secondary-saffron transition">Contact</a>
+                <a href="#about" class="text-gray-600 hover:text-green-600">About</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-green-600">How It Works</a>
+                <a href="#departments" class="text-gray-600 hover:text-green-600">Departments</a>
+                <a href="#get-involved" class="text-gray-600 hover:text-green-600">Get Involved</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-600">Contact</a>
             </div>
-            <p class="italic">"Small acts, multiplied by millions, can transform the world."</p>
+            <p class="text-gray-600 italic">"Small acts, multiplied by millions, can transform the world."</p>
         </div>
-        <button id="scroll-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-green text-white rounded-full shadow-lg hover:bg-green-700 transition hidden" aria-label="Scroll to Top">
+        <button id="scroll-to-top" class="fixed bottom-8 right-8 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition hidden">
             <i class="fas fa-arrow-up"></i>
         </button>
     </footer>
 
-    <!-- Thank You Message Overlay -->
-    <div id="thank-you" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-            <h3 class="text-2xl font-bold mb-4 text-primary-green">Thank You!</h3>
-            <p class="text-lg mb-4 text-gray-600">We’ve received your submission and will get back to you soon.</p>
-            <button id="close-thank-you" class="btn bg-secondary-saffron hover:bg-orange-600">Close</button>
-        </div>
-    </div>
-
     <!-- JavaScript -->
     <script>
-        // Scroll-to-Top Button
         const scrollToTopBtn = document.getElementById('scroll-to-top');
         window.addEventListener('scroll', () => {
-            scrollToTopBtn.classList.toggle('hidden', window.scrollY <= 300);
+            if (window.scrollY > 300) scrollToTopBtn.classList.remove('hidden');
+            else scrollToTopBtn.classList.add('hidden');
         });
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
-        // Thank You Message Handling
-        const urlParams = new URLSearchParams(window.location.search);
-        const thankYouDiv = document.getElementById('thank-you');
-        const closeThankYouBtn = document.getElementById('close-thank-you');
-        if (urlParams.get('submitted') === 'true') {
-            thankYouDiv.classList.remove('hidden');
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
-        closeThankYouBtn.addEventListener('click', () => {
-            thankYouDiv.classList.add('hidden');
-        });
-
-        // Active Nav Link Highlighting
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section[id]');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.scrollY >= sectionTop - 60) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Animation Keyframes
-        const styleSheet = document.createElement('style');
-        styleSheet.innerHTML = `
-            @keyframes fade-in {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            @keyframes slide-up {
-                from { transform: translateY(20px); opacity: 0; }
-                to { transform: translateY(0); opacity: 1; }
-            }
-            .animate-fade-in {
-                animation: fade-in 1s ease-in-out;
-            }
-            .animate-slide-up {
-                animation: slide-up 1s ease-in-out;
-            }
-        `;
-        document.head.appendChild(styleSheet);
     </script>
 </body>
 </html>
