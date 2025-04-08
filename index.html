@@ -1,27 +1,193 @@
-<section id="departments" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Our Departments</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <a href="reusable-bag-network.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                <h3 class="text-xl font-semibold mb-2">Reusable Bag Network</h3>
-                <p>Building a circular system for reusable bags.</p>
-            </a>
-            <a href="waste-collection.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                <h3 class="text-xl font-semibold mb-2">Waste Collection</h3>
-                <p>Organizing efficient waste recovery.</p>
-            </a>
-            <a href="student-engagement.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                <h3 class="text-xl font-semibold mb-2">Student Engagement</h3>
-                <p>Empowering youth for sustainability.</p>
-            </a>
-            <a href="research-innovation.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                <h3 class="text-xl font-semibold mb-2">Research & Innovation</h3>
-                <p>Designing scalable eco-solutions.</p>
-            </a>
-            <a href="social-awareness-campaigns.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                <h3 class="text-xl font-semibold mb-2">Social Awareness Campaigns</h3>
-                <p>Sparking a movement against plastic.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan Jhola - Sustainability Startup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #4CAF50; border-radius: 4px; }
+        .btn { transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .department-card { transition: all 0.3s ease; }
+        .department-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-cream-100">
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Jeevan Jhola</h1>
+            <p class="text-xl md:text-2xl mb-6">"What You Carry, Carries You"</p>
+            <div class="space-x-4">
+                <a href="#get-involved" class="btn inline-block px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg">Join Us</a>
+                <a href="#how-it-works" class="btn inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg">Explore System</a>
+            </div>
+            <a href="#about" class="absolute bottom-10 animate-bounce">
+                <i class="fas fa-chevron-down text-2xl"></i>
             </a>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:flex items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold mb-4">About Us</h2>
+                <p class="text-lg mb-4">Jeevan Jhola is a sustainability-driven startup that aims to eliminate single-use plastic from daily life through community-powered circular systems.</p>
+                <p class="text-lg mb-4"><strong>Mission:</strong> Plastic-free, sustainable, youth-powered future.</p>
+                <p class="text-lg mb-4"><strong>Vision:</strong> A world where utility and responsibility go hand in hand.</p>
+                <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-600">"We’re not just reducing plastic—we’re building a movement." - Founder</blockquote>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1522075782449-2f639aa9c2e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Volunteers working on sustainability initiatives" class="rounded-lg shadow-lg w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-cream-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Take Bag</h3>
+                    <p>Pick up a reusable bag from our partner shops.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Use</h3>
+                    <p>Use it for shopping, deliveries, or daily needs.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Return</h3>
+                    <p>Drop it off at any collection point.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">4</div>
+                    <h3 class="text-xl font-semibold mb-2">Earn Points</h3>
+                    <p>Get rewards for every return.</p>
+                </div>
+            </div>
+            <p class="text-center mt-8 text-lg">Future Scope: Reusable containers, delivery systems, and awareness campaigns.</p>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Departments</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <a href="reusable-bag-network.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Reusable Bag Network</h3>
+                    <p>Building a circular system for reusable bags.</p>
+                </a>
+                <a href="waste-collection.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Waste Collection</h3>
+                    <p>Organizing efficient waste recovery.</p>
+                </a>
+                <a href="student-engagement.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Student Engagement</h3>
+                    <p>Empowering youth for sustainability.</p>
+                </a>
+                <a href="research-innovation.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Research & Innovation</h3>
+                    <p>Designing scalable eco-solutions.</p>
+                </a>
+                <a href="social-awareness-campaigns.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Social Awareness Campaigns</h3>
+                    <p>Sparking a movement against plastic.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="py-16 bg-cream-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Get Involved</h2>
+            <p class="text-lg text-center mb-12">Be a part of the change. Join us as an intern, volunteer, or partner.</p>
+            <div class="container">
+                <h1 class="text-2xl font-semibold mb-6 text-center">Join Jeevan Jhola</h1>
+                <form target="_blank" action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Submission from Jeevan Jhola Website">
+                    <input type="hidden" name="_next" value="https://<your-username>.github.io/jeevan-jhola/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Jeevan Jhola! We’ll get back to you soon.">
+                    <div class="form-group mb-4">
+                        <div class="form-row flex flex-col md:flex-row md:space-x-4">
+                            <div class="col flex-1">
+                                <input type="text" name="name" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Full Name" required>
+                            </div>
+                            <div class="col flex-1">
+                                <input type="email" name="email" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <div class="form-row flex flex-col md:flex-row md:space-x-4">
+                            <div class="col flex-1">
+                                <input type="tel" name="phone" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Phone Number" required>
+                            </div>
+                            <div class="col flex-1">
+                                <input type="text" name="location" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Location" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <textarea placeholder="Why do you want to join?" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" name="why" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-dark btn-block w-full p-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition">Submit Form</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+            <p class="text-lg mb-4">Email: <a href="mailto:hello.jeevanjhola@gmail.com" class="text-green-600 hover:underline">hello.jeevanjhola@gmail.com</a></p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/company/jeevan-jhola/?viewAsMember=true" target="_blank" class="text-gray-600 hover:text-green-600 transition"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://wa.me/919709799899" target="_blank" class="text-gray-600 hover:text-green-600 transition"><i class="fab fa-whatsapp fa-2x"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-100 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-4">
+                <a href="#about" class="text-gray-600 hover:text-green-600">About</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-green-600">How It Works</a>
+                <a href="#departments" class="text-gray-600 hover:text-green-600">Departments</a>
+                <a href="#get-involved" class="text-gray-600 hover:text-green-600">Get Involved</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-600">Contact</a>
+            </div>
+            <p class="text-gray-600 italic">"Small acts, multiplied by millions, can transform the world."</p>
+        </div>
+        <button id="scroll-to-top" class="fixed bottom-8 right-8 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition hidden">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) scrollToTopBtn.classList.remove('hidden');
+            else scrollToTopBtn.classList.add('hidden');
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
