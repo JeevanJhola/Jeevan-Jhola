@@ -3,219 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeevan Jhola - Sustainability Startup</title>
+    <title>Jeevan Jhola - What You Carry, Carries You</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background: #1A1A1A; color: #FFFFFF; }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background: #4CAF50; border-radius: 4px; }
-        .btn { transition: all 0.3s ease; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .department-card { transition: all 0.3s ease; }
-        .department-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        
-        /* Enhanced Tagline Styles */
-        .tagline {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            position: relative;
-            display: inline-block;
-            animation: fadeInUp 1.5s ease;
-        }
-        .tagline::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 3px;
-            background: #fff;
-            border-radius: 2px;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        ::-webkit-scrollbar-thumb { background: #2E7D32; border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .btn { transition: all 0.3s ease; background: linear-gradient(45deg, #2E7D32, #4DB6AC); }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
+        .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .section-bg { background: linear-gradient(135deg, #1A1A1A, #2E2E2E); }
     </style>
+    <meta name="description" content="Jeevan Jhola: A community-powered circular system to eliminate single-use plastic in India and beyond.">
+    <meta name="keywords" content="circular economy India, global reuse systems, sustainability, plastic-free, Jeevan Jhola">
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Jeevan Jhola",
+      "url": "https://jeevanjhola.github.io/jeevan-jhola",
+      "logo": "/assets/logo-jj.png",
+      "founder": "Akash Kumar",
+      "sameAs": "https://www.linkedin.com/company/jeevan-jhola/?viewAsMember=true",
+      "description": "A sustainability startup scaling reusable systems from India to the world."
+    }
+    </script>
 </head>
-<body class="font-sans text-gray-800 bg-cream-100">
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900 shadow-lg z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home"><img src="/assets/logo-jj.png" alt="Jeevan Jhola Logo" class="h-10"></a>
+            <div class="space-x-6">
+                <a href="#why" class="text-white hover:text-yellow-400">Why</a>
+                <a href="#departments" class="text-white hover:text-yellow-400">Departments</a>
+                <a href="#participate" class="text-white hover:text-yellow-400">Participate</a>
+                <a href="#progress" class="text-white hover:text-yellow-400">Progress</a>
+                <a href="#team" class="text-white hover:text-yellow-400">Team</a>
+                <a href="#contact" class="text-white hover:text-yellow-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section id="hero" class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Jeevan Jhola</h1>
-            <div class="tagline mb-8">
-                <p class="text-3xl md:text-4xl italic font-light">"What You Carry, Carries You"</p>
-            </div>
-            <div class="space-x-4">
-                <a href="#get-involved" class="btn inline-block px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg">Join Us</a>
-                <a href="#how-it-works" class="btn inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg">Explore System</a>
-            </div>
-            <a href="#about" class="absolute bottom-10 animate-bounce">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
+    <section id="home" class="h-screen flex items-center justify-center section-bg">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Jeevan Jhola</h1>
+            <p class="text-xl md:text-2xl mb-6 text-yellow-400">"What You Carry, Carries You"</p>
+            <div id="countdown" class="text-lg md:text-xl mb-8 text-teal-400"></div>
+            <a href="#participate" class="btn inline-block px-8 py-4 text-white rounded-full text-lg">Join Now</a>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4 md:flex items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <h2 class="text-3xl font-bold mb-4">About Us</h2>
-                <p class="text-lg mb-4">Jeevan Jhola is a sustainability-driven startup that aims to eliminate single-use plastic from daily life through community-powered circular systems.</p>
-                <p class="text-lg mb-4"><strong>Mission:</strong> Plastic-free, sustainable, youth-powered future.</p>
-                <p class="text-lg mb-4"><strong>Vision:</strong> A world where utility and responsibility go hand in hand.</p>
-                <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-600">"We’re not just reducing plastic—we’re building a movement." - Founder</blockquote>
-            </div>
-            <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1522075782449-2f639aa9c2e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Volunteers working on sustainability initiatives" class="rounded-lg shadow-lg w-full">
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-16 bg-cream-100">
+    <!-- Our Why Section -->
+    <section id="why" class="py-20 section-bg">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">1</div>
-                    <h3 class="text-xl font-semibold mb-2">Take Bag</h3>
-                    <p>Pick up a reusable bag from our partner shops.</p>
+            <h2 class="text-4xl font-bold text-center mb-12">Our Why</h2>
+            <div class="md:flex items-start">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Founder’s Vision</h3>
+                    <p class="text-lg">“I’m Akash Kumar—born in Bihar, studying AI & Data Science in Kerala. Plastic overwhelms our rivers and homes. Jeevan Jhola is my solution: a scalable, people-powered reuse system.”</p>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">2</div>
-                    <h3 class="text-xl font-semibold mb-2">Use</h3>
-                    <p>Use it for shopping, deliveries, or daily needs.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">3</div>
-                    <h3 class="text-xl font-semibold mb-2">Return</h3>
-                    <p>Drop it off at any collection point.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl">4</div>
-                    <h3 class="text-xl font-semibold mb-2">Earn Points</h3>
-                    <p>Get rewards for every return.</p>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4">India generates 26,000 tonnes of plastic waste daily—60% unrecycled. Globally, 300 million tonnes pile up yearly. We’re here to change that.</p>
+                    <p class="text-lg">Roadmap: Prototype (2025), India Pilot (2026), Global Reach (2027).</p>
                 </div>
             </div>
-            <p class="text-center mt-8 text-lg">Future Scope: Reusable containers, delivery systems, and awareness campaigns.</p>
         </div>
     </section>
 
     <!-- Departments Section -->
-    <section id="departments" class="py-16 bg-white">
+    <section id="departments" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Departments</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <a href="reusable-bag-network.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                    <h3 class="text-xl font-semibold mb-2">Reusable Bag Network</h3>
-                    <p>Building a circular system for reusable bags.</p>
+            <h2 class="text-4xl font-bold text-center mb-12">Our Departments</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="reusable-bag-network.html" class="card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-400">Reusable Bag Network</h3>
+                    <p>Building circular systems for reusable bags across communities.</p>
                 </a>
-                <a href="waste-collection.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                    <h3 class="text-xl font-semibold mb-2">Waste Collection</h3>
-                    <p>Organizing efficient waste recovery.</p>
+                <a href="waste-collection.html" class="card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-400">Waste Collection</h3>
+                    <p>Efficient recovery to keep materials in use, not landfills.</p>
                 </a>
-                <a href="student-engagement.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                    <h3 class="text-xl font-semibold mb-2">Student Engagement</h3>
-                    <p>Empowering youth for sustainability.</p>
+                <a href="student-engagement.html" class="card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-400">Student Engagement</h3>
+                    <p>Empowering youth to lead sustainability efforts.</p>
                 </a>
-                <a href="research-innovation.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                    <h3 class="text-xl font-semibold mb-2">Research & Innovation</h3>
-                    <p>Designing scalable eco-solutions.</p>
+                <a href="research-innovation.html" class="card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-400">Research & Innovation</h3>
+                    <p>Designing scalable eco-solutions for the future.</p>
                 </a>
-                <a href="social-awareness-campaigns.html" class="department-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
-                    <h3 class="text-xl font-semibold mb-2">Social Awareness Campaigns</h3>
-                    <p>Sparking a movement against plastic.</p>
+                <a href="social-awareness-campaigns.html" class="card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-400">Social Awareness Campaigns</h3>
+                    <p>Sparking a movement to end plastic reliance.</p>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Get Involved Section -->
-    <section id="get-involved" class="py-16 bg-cream-100">
+    <!-- Participate Section -->
+    <section id="participate" class="py-20 section-bg">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Get Involved</h2>
-            <p class="text-lg text-center mb-12">Be a part of the change. Join us as an intern, volunteer, or partner.</p>
-            <div class="container">
-                <h1 class="text-2xl font-semibold mb-6 text-center">Join Jeevan Jhola</h1>
-                <form target="_blank" action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Submission from Jeevan Jhola Website">
-                    <input type="hidden" name="_next" value="https://<your-username>.github.io/jeevan-jhola/thank-you.html">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Jeevan Jhola! We’ll get back to you soon.">
-                    <div class="form-group mb-4">
-                        <div class="form-row flex flex-col md:flex-row md:space-x-4">
-                            <div class="col flex-1">
-                                <input type="text" name="name" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Full Name" required>
-                            </div>
-                            <div class="col flex-1">
-                                <input type="email" name="email" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Email Address" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group mb-4">
-                        <div class="form-row flex flex-col md:flex-row md:space-x-4">
-                            <div class="col flex-1">
-                                <input type="tel" name="phone" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Phone Number" required>
-                            </div>
-                            <div class="col flex-1">
-                                <input type="text" name="location" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" placeholder="Location" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group mb-4">
-                        <textarea placeholder="Why do you want to join?" class="form-control w-full p-3 border rounded-lg focus:outline-none focus:border-green-600" name="why" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-lg btn-dark btn-block w-full p-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition">Submit Form</button>
-                </form>
+            <h2 class="text-4xl font-bold text-center mb-12">Participate</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Volunteer</h3>
+                    <form action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Volunteer Application">
+                        <input type="hidden" name="_next" value="https://jeevanjhola.github.io/jeevan-jhola/thank-you.html">
+                        <input type="text" name="name" placeholder="Name" required class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white">
+                        <input type="email" name="email" placeholder="Email" required class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white">
+                        <select name="skills" class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white">
+                            <option value="design">Design</option>
+                            <option value="outreach">Outreach</option>
+                            <option value="tech">Tech</option>
+                        </select>
+                        <button type="submit" class="btn w-full p-3 text-white rounded-lg">Apply</button>
+                    </form>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Partner</h3>
+                    <form action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Partnership Inquiry">
+                        <input type="hidden" name="_next" value="https://jeevanjhola.github.io/jeevan-jhola/thank-you.html">
+                        <input type="text" name="organization" placeholder="Organization" required class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white">
+                        <input type="email" name="email" placeholder="Email" required class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white">
+                        <textarea name="message" placeholder="Your Interest" required class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white"></textarea>
+                        <button type="submit" class="btn w-full p-3 text-white rounded-lg">Submit</button>
+                    </form>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Idea Lab</h3>
+                    <form action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Idea Submission">
+                        <input type="hidden" name="_next" value="https://jeevanjhola.github.io/jeevan-jhola/thank-you.html">
+                        <input type="text" name="name" placeholder="Name" required class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white">
+                        <textarea name="idea" placeholder="Your Idea" required class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white"></textarea>
+                        <button type="submit" class="btn w-full p-3 text-white rounded-lg">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="py-16 bg-white">
+    <!-- Progress Section -->
+    <section id="progress" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Progress</h2>
+            <p class="text-center text-lg mb-12">We’re building—check back for sketches, feedback, and updates.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Team</h2>
+            <div class="md:flex items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/300" alt="Akash Kumar" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Akash Kumar</h3>
+                    <p>B.Tech AI & Data Science student driving a plastic-free future from Mattakkara/Kochi.</p>
+                </div>
+            </div>
+            <p class="mt-8 text-center">Want to join? We need strategists, storytellers, and connectors—email <a href="mailto:hello.jeevanjhola@gmail.com" class="text-teal-400">hello.jeevanjhola@gmail.com</a>.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-            <p class="text-lg mb-4">Email: <a href="mailto:hello.jeevanjhola@gmail.com" class="text-green-600 hover:underline">hello.jeevanjhola@gmail.com</a></p>
-            <div class="flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/company/jeevan-jhola/?viewAsMember=true" target="_blank" class="text-gray-600 hover:text-green-600 transition"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://wa.me/919709799899" target="_blank" class="text-gray-600 hover:text-green-600 transition"><i class="fab fa-whatsapp fa-2x"></i></a>
-            </div>
+            <h2 class="text-4xl font-bold mb-8">Contact</h2>
+            <p class="text-lg mb-4">Email: <a href="mailto:hello.jeevanjhola@gmail.com" class="text-teal-400">hello.jeevanjhola@gmail.com</a></p>
+            <p class="text-lg mb-4">LinkedIn: <a href="https://www.linkedin.com/company/jeevan-jhola/?viewAsMember=true" class="text-teal-400">Jeevan Jhola</a></p>
+            <p class="text-lg mb-4">Base: Mattakkara/Kochi, India</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-100 text-center">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-4">
-                <a href="#about" class="text-gray-600 hover:text-green-600">About</a>
-                <a href="#how-it-works" class="text-gray-600 hover:text-green-600">How It Works</a>
-                <a href="#departments" class="text-gray-600 hover:text-green-600">Departments</a>
-                <a href="#get-involved" class="text-gray-600 hover:text-green-600">Get Involved</a>
-                <a href="#contact" class="text-gray-600 hover:text-green-600">Contact</a>
-            </div>
-            <p class="text-gray-600 italic">"Small acts, multiplied by millions, can transform the world."</p>
-        </div>
-        <button id="scroll-to-top" class="fixed bottom-8 right-8 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition hidden">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+    <footer class="py-8 bg-gray-800 text-center">
+        <p class="text-sm">© 2025 Jeevan Jhola | UN SDGs & India PWM Rules Aligned</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Countdown Script -->
     <script>
-        const scrollToTopBtn = document.getElementById('scroll-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) scrollToTopBtn.classList.remove('hidden');
-            else scrollToTopBtn.classList.add('hidden');
-        });
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        const countdownDate = new Date('2025-07-01T00:00:00').getTime();
+        const countdownElement = document.getElementById('countdown');
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s to Prototype`;
+            if (distance < 0) countdownElement.innerHTML = "Prototype Launched!";
+        }, 1000);
     </script>
 </body>
 </html>
