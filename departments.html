@@ -10,6 +10,8 @@
     <style>
         body { font-family: 'Poppins', sans-serif; }
         .header-gradient { background: linear-gradient(90deg, #1A4731, #2E7D32, #4DB6AC); }
+        .nav-menu { display: none; }
+        .nav-menu.active { display: block; }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -24,10 +26,20 @@
                 <a href="contact.html" class="text-white hover:text-yellow-400 transition-colors">Contact Us</a>
                 <a href="join.html" class="text-white hover:text-yellow-400 transition-colors">Join</a>
             </nav>
-            <button class="md:hidden text-white">
+            <button id="menu-toggle" class="md:hidden text-white">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
+        <!-- Mobile Menu -->
+        <nav id="nav-menu" class="nav-menu md:hidden bg-white shadow-lg">
+            <ul class="space-y-4 p-4">
+                <li><a href="index.html" class="block text-gray-800 hover:text-green-600">Home</a></li>
+                <li><a href="departments.html" class="block text-gray-800 hover:text-green-600">Departments</a></li>
+                <li><a href="about.html" class="block text-gray-800 hover:text-green-600">About Us</a></li>
+                <li><a href="contact.html" class="block text-gray-800 hover:text-green-600">Contact Us</a></li>
+                <li><a href="join.html" class="block text-gray-800 hover:text-green-600">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Departments Section -->
@@ -47,26 +59,58 @@
                         <p class="text-gray-600 mb-4">Collaborates with local entities to collect and recycle plastic waste effectively.</p>
                         <a href="departments/recycling.html" class="text-green-600 hover:underline">Learn More</a>
                     </div>
-                    <div class="bg-green-50 p-6 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-semibold mb-4 text-green-700">Community Engagement</h2>
-                        <p class="text-gray-600 mb-4">Conducts workshops and drives to raise awareness and involve the community.</p>
-                        <a href="departments/community-engagement.html" class="text-green-600 hover:underline">Learn More</a>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-semibold mb-4 text-green-700">Research & Development</h2>
-                        <p class="text-gray-600 mb-4">Innovates sustainable materials and processes for a circular economy.</p>
-                        <a href="departments/research-development.html" class="text-green-600 hover:underline">Learn More</a>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-semibold mb-4 text-green-700">Recharge & Return Network</h2>
-                        <p class="text-gray-600 mb-4">Establishes a system for borrowing and returning reusable bags.</p>
-                        <a href="departments/recharge-return.html" class="text-green-600 hover:underline">Learn More</a>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-semibold mb-4 text-green-700">Operations & Logistics</h2>
-                        <p class="text-gray-600 mb-4">Manages supply chain and coordination for efficiency.</p>
-                        <a href="departments/operations-logistics.html" class="text-green-600 hover:underline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Jeevan Jhola</h3>
+                    <p class="text-gray-400">Creating a nationwide reusable bag loop to eliminate single-use plastic through smart, sustainable systems.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="departments.html" class="text-gray-400 hover:text-white transition-colors">Departments</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="join.html" class="text-gray-400 hover:text-white transition-colors">Join</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <p class="text-gray-400 mb-2">Kottayam, Kerala 686564, India</p>
+                    <p class="text-gray-400 mb-2">Phone: 9709799899</p>
+                    <p class="text-gray-400 mb-4">Email: hello.jeevanjhola@gmail.com</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/jeevan-jhola/" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
                     </div>
                 </div>
             </div>
-        </
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <form action="https://formsubmit.co/hello.jeevanjhola@gmail.com" method="POST" class="flex flex-col md:flex-row gap-2 max-w-lg mx-auto">
+                    <input type="email" name="email" placeholder="Your email address" required class="flex-grow px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Subscribe</button>
+                </form>
+                <p class="text-center text-gray-500 text-sm mt-4">© 2025 Jeevan Jhola. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
