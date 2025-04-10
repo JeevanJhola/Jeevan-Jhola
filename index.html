@@ -15,10 +15,12 @@
         .impact-card { transition: transform 0.3s ease; }
         .impact-card:hover { transform: translateY(-5px); }
         .hero { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1508615263227-c5fc0706048b') center/cover no-repeat; }
+        .dropdown-menu { display: none; position: absolute; background-color: white; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 5px; }
+        .dropdown:hover .dropdown-menu { display: block; }
     </style>
 </head>
 <body class="bg-gray-100">
-    <!-- Header -->
+    <!-- Header with Quick Links Dropdown -->
     <header class="fixed top-0 w-full header-gradient shadow-lg z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html"><img src="/assets/logo-jj.png" alt="Jeevan Jhola Logo" class="h-12" onerror="this.src='https://via.placeholder.com/50'"></a>
@@ -28,6 +30,14 @@
                 <a href="about.html" class="text-white hover:text-yellow-400 transition-colors">About Us</a>
                 <a href="contact.html" class="text-white hover:text-yellow-400 transition-colors">Contact Us</a>
                 <a href="join.html" class="text-white hover:text-yellow-400 transition-colors">Join</a>
+                <div class="relative dropdown">
+                    <button class="text-white hover:text-yellow-400 transition-colors">Quick Links <i class="fas fa-caret-down ml-1"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="departments/reusable-bags.html" class="block px-4 py-2 text-gray-800 hover:bg-green-50">Reusable Bags</a>
+                        <a href="departments/recycling.html" class="block px-4 py-2 text-gray-800 hover:bg-green-50">Recycling</a>
+                        <a href="departments/community-engagement.html" class="block px-4 py-2 text-gray-800 hover:bg-green-50">Community Engagement</a>
+                    </div>
+                </div>
             </nav>
             <button class="md:hidden text-white">
                 <i class="fas fa-bars text-2xl"></i>
@@ -139,7 +149,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with FormSubmit -->
     <footer class="py-12 bg-gray-800 text-white">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
