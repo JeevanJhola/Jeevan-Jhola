@@ -10,7 +10,8 @@
     <style>
         body { font-family: 'Poppins', sans-serif; }
         .header-gradient { background: linear-gradient(90deg, #1A4731, #2E7D32, #4DB6AC); }
-        .form-container { width: 100%; height: 800px; border: none; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+        .nav-menu { display: none; }
+        .nav-menu.active { display: block; }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -25,26 +26,29 @@
                 <a href="contact.html" class="text-white hover:text-yellow-400 transition-colors">Contact Us</a>
                 <a href="join.html" class="text-white font-semibold hover:text-yellow-400 transition-colors">Join</a>
             </nav>
-            <button class="md:hidden text-white">
+            <button id="menu-toggle" class="md:hidden text-white">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
+        <!-- Mobile Menu -->
+        <nav id="nav-menu" class="nav-menu md:hidden bg-white shadow-lg">
+            <ul class="space-y-4 p-4">
+                <li><a href="index.html" class="block text-gray-800 hover:text-green-600">Home</a></li>
+                <li><a href="departments.html" class="block text-gray-800 hover:text-green-600">Departments</a></li>
+                <li><a href="about.html" class="block text-gray-800 hover:text-green-600">About Us</a></li>
+                <li><a href="contact.html" class="block text-gray-800 hover:text-green-600">Contact Us</a></li>
+                <li><a href="join.html" class="block text-gray-800 hover:text-green-600">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Join Section -->
     <section class="py-20 bg-white mt-16">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 text-green-800">Join Jeevan Jhola</h1>
-                <p class="text-xl text-center text-gray-600 mb-12 italic">Be a part of the movement to eliminate single-use plastic</p>
-                
-                <div class="mb-16 p-8 bg-green-50 rounded-xl">
-                    <p class="text-lg text-center text-gray-700 leading-relaxed">
-                        Whether you’re a volunteer, a partner, or someone with a great idea, we invite you to join us in creating a sustainable future. Fill out the form below to get started!
-                    </p>
-                </div>
-
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe8s8vqnKBj665tV56NMc9/viewform?embedded=true" class="form-container mx-auto" title="Join Jeevan Jhola Form">Loading…</iframe>
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-green-800">Join Jeevan Jhola</h1>
+                <p class="text-xl text-gray-600 mb-12 italic">Be a part of the movement to eliminate single-use plastic</p>
+                <a href="https://forms.gle/VqnKBj665tV56NMc9" target="_blank" class="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-lg font-semibold">Join Us</a>
             </div>
         </div>
     </section>
@@ -88,5 +92,14 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
