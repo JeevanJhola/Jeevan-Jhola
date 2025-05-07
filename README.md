@@ -21,7 +21,6 @@ This project presents a modern, responsive, and visually appealing landing page 
 * **HTML5**
 * **CSS3**
 * **JavaScript**
-* (Optional: Tailwind CSS / Bootstrap / AOS / FontAwesome — mention any specific libraries used)
 
 ## 📁 Project Structure
 
