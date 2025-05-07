@@ -6,7 +6,7 @@ This project presents a modern, responsive, and visually appealing landing page 
 
 ## 🌐 Live Demo
 
-> [https://jeevan-jhola.vercel.app/](https://jeevan-jhola.vercel.app/)
+> [https://jeevanjhola.github.io/Jeevan-Jhola/](https://jeevanjhola.github.io/Jeevan-Jhola/)
 
 ## 🚀 Features
 
