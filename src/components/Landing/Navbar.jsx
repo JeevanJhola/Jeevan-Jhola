@@ -12,7 +12,8 @@ const Navbar = () => {
     { name: "Our Solution", to: "solution" },
     { name: "How It Works", to: "eco-system" },
     { name: "Testimonials", to: "testimonials" },
-    { name: "FAQ", to: "faq" },
+    { name: "About Us", to: "about" },
+    { name: "Support", to: "faq" },
     { name: "Get Involved", to: "cta" },
   ]
 

@@ -9,6 +9,7 @@ import Testimonials from "./components/Landing/Testimonials"
 import CTA from "./components/Landing/CTA"
 import Footer from "./components/Landing/Footer"
 import FAQ from "./components/Landing/FAQ"
+import AboutUs from "./components/Landing/AboutUs"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <SolutionSection />
       <HowItWorks />
       <Testimonials />
+      <AboutUs />
       <FAQ />
       <CTA />
       <Footer />
