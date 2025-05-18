@@ -255,8 +255,8 @@ const FAQ = () => {
           >
             <p className="text-emerald-600 mb-4">
               Prefer email? Write to us at{' '}
-              <a href="mailto:care@jeevanjhola.com" className="font-semibold hover:underline">
-                care@jeevanjhola.com
+              <a href="mailto:hello.jeevanjhola@gmail.com" className="font-semibold hover:underline">
+                hello.jeevanjhola@gmail.com
               </a>
             </p>
           </motion.div>
