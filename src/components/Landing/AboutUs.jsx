@@ -59,7 +59,37 @@ const AboutUs = () => {
       email: "adithyankoonoth@gmail.com",
       phone: "9562099491",
       joiningDate: "02/04/2025"
-    }
+    },
+    {
+      id: 6,
+      name: "Gourab Mahanta",
+      role: "HR Specialist",
+      skills: ["Social media Coordination", "Content creation", "community engagement"],
+      department: "Execution",
+      email: "gourabmahanta347@gmail.com",
+      phone: "7872780835",
+      joiningDate: "16/05/2025"
+    },
+    {
+      id: 7,
+      name: "Ajas Daison",
+      role: "Tech Support, Maintain website",
+      skills: ["Tech Support", "Website Maintenance"],
+      department: "Execution",
+      email: "ajas.daison@gmail.com",
+      phone: "8606664486",
+      joiningDate: "15/05/2025",
+    },
+    {
+      id: 8,
+      name: "Sandeep Kumar",
+      role: "Tech Support, Design Lead",
+      skills: ["Tech Support", "Design Lead"],
+      department: "Execution",
+      email: "sandeepsanthosh998@gmail.com",
+      phone: "9061922326",
+      joiningDate: "18/05/2025",
+    },
   ];
 
   const squads = [
