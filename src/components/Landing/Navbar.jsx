@@ -33,7 +33,11 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <FaLeaf className="text-emerald-800 text-2xl" />
+          <img 
+                    src="./Logo-Jevan-Jhola.png" 
+                    alt="Logo" 
+                    className="h-16 w-auto mr-3 opacity-90"
+                  />
           <span className="text-2xl font-bold text-emerald-800 font-montserrat tracking-tight">
             Jeevan Jhola
           </span>

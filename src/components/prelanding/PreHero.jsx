@@ -308,8 +308,51 @@ const PreHero = () => {
   ];
 
   return (
-    <> {/* Use React Fragment to return multiple top-level elements */}
+    <>
+      
+      
+      {/* Logo in Hero Section */}
       <section id="pre-hero" className="relative pt-16 pb-16 md:pt-24 md:pb-24 bg-gradient-to-br from-green-50 to-white text-green-800 overflow-hidden">
+        {/* Logo Decoration in Background */}
+          <div className="absolute inset-0 z-0 opacity-5">
+            <motion.div
+              className="absolute top-1/4 left-1/4 w-64 h-64"
+              animate={{
+                rotate: [0, 360],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{
+                duration: 30,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
+              <img 
+                src="./Logo-Jevan-Jhola.png" 
+                alt="Decorative Logo" 
+                className="w-full h-full object-contain"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute bottom-1/3 right-1/4 w-48 h-48"
+              animate={{
+                rotate: [360, 0],
+                scale: [1, 1.05, 1]
+              }}
+            transition={{
+              duration: 40,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <img 
+              src="./Logo-Jevan-Jhola.png" 
+              alt="Decorative Logo" 
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
+        </div>
+
         {/* Animated Particle Background */}
         <div className="absolute inset-0 z-0 opacity-20">
           {[...Array(20)].map((_, i) => (
@@ -349,13 +392,26 @@ const PreHero = () => {
               transition={{ duration: 0.8 }}
               className="lg:w-1/2"
             >
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="mb-8 inline-flex items-center bg-green-100/50 backdrop-blur-sm px-6 py-3 rounded-full border border-green-300/70"
-              >
-                <FaLeaf className="mr-3 text-green-500 text-xl" />
-                <span className="font-medium text-green-700">Jeevan Jhola Initiatives</span>
-              </motion.div>
+              {/* Logo and Title Integration */}
+              <div className="flex items-center mb-8">
+                <motion.div 
+                  whileHover={{ rotate: 10, scale: 1.1 }}
+                  className="mr-4 bg-white p-2 rounded-full shadow-lg"
+                >
+                  <img 
+                    src="./Logo-Jevan-Jhola.png" 
+                    alt="Jeevan Jhola Logo" 
+                    className="h-16 w-auto"
+                  />
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-flex items-center bg-green-100/50 backdrop-blur-sm px-6 py-3 rounded-full border border-green-300/70"
+                >
+                  <FaLeaf className="mr-3 text-green-500 text-xl" />
+                  <span className="font-medium text-green-700">Jeevan Jhola Initiatives</span>
+                </motion.div>
+              </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 <span className="block text-green-900">Sustainable Living,</span>
@@ -379,7 +435,7 @@ const PreHero = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/home"
+                  to="/Jeevan-Jhola/home"
                   className="flex items-center justify-center px-8 py-4 rounded-xl bg-green-700 text-white font-semibold shadow-lg hover:bg-green-800 hover:shadow-green-300/50 transition-all duration-300 relative overflow-hidden group"
                 >
                   <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -419,11 +475,18 @@ const PreHero = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-green-200/50 to-green-300/50 rounded-2xl rotate-3 animate-pulse"></div>
                 <div className="relative bg-white/70 backdrop-blur-sm border border-green-200 rounded-2xl p-8">
-                  <h3 className="text-xl font-bold text-green-700 mb-4">Our Core Philosophy</h3>
-                  <p className="text-green-600 mb-6 italic">
+                  <div className="flex justify-center mb-4">
+                    <img 
+                      src="./Logo-Jevan-Jhola.png" 
+                      alt="Logo" 
+                      className="h-12 w-auto opacity-90"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-green-700 mb-4 text-center">Our Core Philosophy</h3>
+                  <p className="text-green-600 mb-6 italic text-center">
                     "We're building something that's always in progress - because the world's problems don't come with manuals."
                   </p>
-                  <div className="flex items-center mt-8">
+                  <div className="flex items-center justify-center mt-8">
                     <div className="flex -space-x-3 mr-4">
                       {[1, 2, 3].map((item) => (
                         <motion.div 
@@ -450,9 +513,16 @@ const PreHero = () => {
                 transition={{ duration: 0.5 }}
                 className="inline-block"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-900">
-                  The Jeevan Jhola Spirit
-                </h2>
+                <div className="flex items-center justify-center mb-4">
+                  <img 
+                    src="./Logo-Jevan-Jhola.png" 
+                    alt="Logo" 
+                    className="h-16 w-auto mr-3 opacity-90"
+                  />
+                  <h2 className="text-3xl md:text-4xl font-bold text-green-900 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-900">
+                    The Jeevan Jhola Spirit
+                  </h2>
+                </div>
                 <div className="h-1 w-24 bg-gradient-to-r from-green-600 to-green-700 mx-auto rounded-full"></div>
               </motion.div>
               <p className="text-green-700 mt-6">
@@ -500,6 +570,13 @@ const PreHero = () => {
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-green-200/50 to-green-300/50 rounded-3xl blur-xl opacity-40 animate-pulse"></div>
               <div className="relative bg-gradient-to-br from-white to-green-50 border border-green-200 rounded-2xl p-8 md:p-10 text-center">
+                <div className="flex justify-center mb-6">
+                  <img 
+                    src="./Logo-Jevan-Jhola.png" 
+                    alt="Logo" 
+                    className="h-20 w-auto opacity-90"
+                  />
+                </div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="inline-flex items-center bg-green-100/50 backdrop-blur-sm px-6 py-2 rounded-full border border-green-300/70 mb-6"
@@ -730,6 +807,13 @@ const PreHero = () => {
             
             <div className="relative z-10 p-8 md:p-12">
               <div className="max-w-4xl mx-auto text-center">
+                <div className="flex justify-center mb-6">
+                  <img 
+                    src="./Logo-Jevan-Jhola.png" 
+                    alt="Logo" 
+                    className="h-24 w-auto opacity-90"
+                  />
+                </div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -783,6 +867,13 @@ const PreHero = () => {
             transition={{ duration: 0.8 }}
             className="text-center border-t border-green-200 pt-12 pb-8"
           >
+            <div className="flex justify-center mb-6">
+              <img 
+                src="./Logo-Jevan-Jhola.png" 
+                alt="Logo" 
+                className="h-20 w-auto opacity-80"
+              />
+            </div>
             <div className="flex justify-center mb-6">
               <div className="flex space-x-6">
                 {[

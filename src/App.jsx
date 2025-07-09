@@ -50,7 +50,7 @@ function App() {
 
           {/* Route for the main website content (Cloth Bag section) */}
           {/* The PreHero will link to this /home path */}
-          <Route path="/home" element={<LandingPage />} />
+          <Route path="/Jeevan-Jhola/home" element={<LandingPage />} />
 
           {/* You can add more routes here for "Relogi" or other branches later */}
           {/* Example for Relogi (once implemented): */}
