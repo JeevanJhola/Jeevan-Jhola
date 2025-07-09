@@ -39,7 +39,7 @@ const Hero = () => {
           <div className="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/20 shadow-xl">
             <div className="bg-white p-3 rounded-xl flex items-center justify-center">
               <img 
-                src="src/assets/Logo-Jevan-Jhola.png" 
+                src="./Logo-Jevan-Jhola.png" 
                 alt="Jevan Jhola" 
                 className="h-16 md:h-20 object-contain"
               />
